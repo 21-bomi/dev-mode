@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음원 등록</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="music_register.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> <!-- SweetAlert2 추가 -->
+    <script src="music_register.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>음원 등록</h2>
+        <form id="registerForm" action="http://localhost:8001/registerMusic" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>음원명</label>
+                <input class="form-control" type="text" name="songName" required>
+            </div>
+            <div class="form-group">
+                <label>장르</label>
+                <input class="form-control" type="text" name="genre" required>
+            </div>
+            <div class="form-group">
+                <label>곡 정보</label>
+                <textarea class="form-control" name="songInfo" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>가사</label>
+                <textarea class="form-control" name="lyrics" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>음원 파일</label>
+                <input class="form-control" type="file" name="audioFile" required>
+            </div>
+            <div class="form-group">
+                <label>이미지 파일</label>
+                <input class="form-control" type="file" name="imageFile" required>
+            </div>
+            <div class="form-group">
+                <label>판매 금액</label>
+                <input class="form-control" type="text" name="price" required>
+            </div>
+            <button type="submit" class="btn btn-primary">등록하기</button>
+        </form>
+    </div>
+</body>
+
+</html>
